@@ -1,4 +1,4 @@
-.container {
+.container1 {
   background-color: $light-gray;
   border: 1px solid $light-gray-border;
   border-radius: 5px;
@@ -29,4 +29,8 @@
   font-size: 1rem;
   color: $light-color;
   margin: 2rem auto;
+}
+
+.col-centered {
+  margin: 0 auto;
 }
