@@ -13,7 +13,7 @@ describe('Actions', ()=>{
     expect(response).toEqual(action);
   })
 
-  it('should generate addtodo action', ()=>{
+  it('should generate add todo action', ()=>{
     var action = {
       type: 'ADD_TODO',
       text: 'walk dog'
@@ -23,6 +23,23 @@ describe('Actions', ()=>{
 
     expect(response).toEqual(action);
   })
+
+  it('should generate add todos action object', ()=>{
+    var todos = [{
+      id: '111',
+      text: 'anything',
+      completed: false,
+      createdAt: 3300,
+      completedAt: undefined
+    }];
+    var action = {
+      type: 'ADD_TODOS',
+      todos
+    };
+
+    var response = actions.addTodos(todos);
+    expect(response).toEqual(action);
+  });
 
   it('should generate toggleShowCompleted action', ()=>{
     var action = {
