@@ -47,6 +47,19 @@ export var addTodos = (todos) => {
   }
 }
 
+export var login = (uid) => {
+  return {
+    type: 'LOGIN',
+    uid
+  }
+}
+
+export var logout = () => {
+  return {
+    type: 'LOGOUT'
+  }
+}
+
 export var startAddTodos = () => {
   return (dispatch,getState) => {
     var todosRef = firebaseRef.child('todos');
