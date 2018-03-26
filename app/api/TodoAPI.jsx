@@ -13,7 +13,7 @@ module.exports = {
     // filter by searchText
     filteredTodos = filteredTodos.filter((todo)=>{
       var text = todo.text.toLowerCase();
-      return searchText.length === 0 || todo.text.indexOf(searchText) !== -1;
+      return searchText.length === 0 || todo.text.indexOf(searchText.toLowerCase()) !== -1;
     });
 
     // sort todos with non-completed first

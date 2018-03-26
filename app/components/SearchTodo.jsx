@@ -1,9 +1,10 @@
-var React = require('react');
+// var React = require('react');
+import React from 'react';
 var {connect} = require('react-redux');
 var actions = require('actions');
 
-export var SearchTodo = React.createClass({
-  render: function(){
+export class SearchTodo extends React.Component{
+  render(){
     var {dispatch, showCompleted, searchText} = this.props;
     return(
       <div className="container__header">
@@ -24,7 +25,7 @@ export var SearchTodo = React.createClass({
       </div>
     )
   }
-});
+};
 
 export default connect(
   (state) => {
